@@ -1,0 +1,131 @@
+*{
+    font-family: 'Edu TAS Beginner', cursive;
+}
+
+nav{
+    background-color: #444444;
+    font-size: medium;
+}
+nav img{
+    width: 160px;
+}
+.navbar a {
+    color: #fff;
+}
+.navbar a:hover{
+    color: #D11E62
+}
+.navbar .navbar-text{
+    color: #D11E62;
+    position: relative;
+    top: 4px;
+    padding-right: 15px;
+    font-size: 19px;
+}
+#navbarNav{
+    justify-content: flex-end;
+    align-items: center;
+    width: 80%;
+}
+.nav-link{
+    width: 100%;
+}
+.navbar-toggler{
+    background-color: #fff;
+}
+.navbar-toggler:hover{
+    background-color: #D11E62;
+    box-shadow: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+/* ------------ Formularios --------------- */
+.container{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+div form input{
+    width: 20%;
+}
+
+.btn{
+    background-color: #444444;
+    color: #fff;
+    border-radius: 13px;
+}
+.btn:hover{
+    background-color: #D11E62;
+    color: #fff
+}
+
+.form-control:focus, .form-check-input:focus{
+    box-shadow: 1px 1px 11px 5px #D11E62;
+}
+.form-check-input:checked{
+    background-color: rgba(209, 30, 98, .7);
+    border: 1px solid #D11E62;
+}
+
+#file{
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+label[for="file"] {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #444444;
+    display: inline-block;
+    transition: all .5s;
+    cursor: pointer;
+    padding: 10px 30px !important;
+    text-transform: uppercase;
+    width: fit-content;
+    text-align: center;
+    border-radius: 10px;
+}
+
+label[for="file"]:hover{
+    background-color: #D11E62;
+}
+
+
+/* -------------- footer ------------------ */
+.footer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    background-color: #444444;
+    color: #fff;
+}
+.text-footer{
+    margin: 15px 0px;
+    font-size: 16px;
+}
+.text-footer a{
+    text-decoration: none;
+    color: #fff;
+}
+.text-footer a:hover{
+    text-decoration: none;
+    color: #D11E62;
+}
