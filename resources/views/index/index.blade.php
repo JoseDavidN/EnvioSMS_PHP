@@ -12,7 +12,9 @@
 
 @section('content')
     <div class="col">
-        <form method="post" enctype="multipart/form-data">
+        <form action="/home" method="post" enctype="multipart/form-data">
+            @csrf
+            @include('partials.message')
             <div class="mb-3">
                 <label for="email" class="form-label">Correo electronico de Altiria:</label>
                 <input type="email" class="form-control" id="email" name="email" required>

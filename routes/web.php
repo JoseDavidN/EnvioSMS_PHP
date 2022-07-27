@@ -28,5 +28,6 @@ Route::get('/login', [LoginController::class, 'show']);
 Route::post('/login', [LoginController::class, 'login']);
 
 Route::get('/home', [HomeController::class, 'index']);
+Route::post('/home', [HomeController::class, 'sendSMS']);
 
 Route::get('/logout', [LogoutController::class, 'logout']);
