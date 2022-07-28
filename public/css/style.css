@@ -1,10 +1,10 @@
 *{
-    font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav{
     background-color: #444444;
-    font-size: medium;
+    font-style: italic;
 }
 nav img{
     width: 160px;
@@ -47,6 +47,8 @@ nav img{
     justify-content: center;
     position: relative;
     top: 100px;
+    font-size: smaller;
+    font-style: oblique;
 }
 .header{
     display: flex;
@@ -58,6 +60,17 @@ nav img{
 }
 div form input{
     width: 20%;
+}
+
+.filtro{
+    display: none;
+}
+.check-form{
+    display: flex;
+    align-items: center;
+}
+#filtroOption2, #radioOption2{
+    margin-left: 5px;
 }
 
 .btn{

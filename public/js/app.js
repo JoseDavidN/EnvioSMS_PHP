@@ -5,5 +5,14 @@ jQuery('input[type=file]').change(function(){
     label.find('span').text(filename);
 });
 
+$('#filtroOption1').click(function(){
+    let filtro = $('.filtro')
+    filtro.css('display', 'block')
+})
+$('#filtroOption2').click(function(){
+    let filtro = $('.filtro')
+    filtro.css('display', 'none')
+})
+
 const fecha = new Date();
 jQuery('span[id="copyright"]').text(fecha.getFullYear())

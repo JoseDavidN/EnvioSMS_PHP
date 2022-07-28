@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500;600&family=Open+Sans:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet"> 
     <script src="https://kit.fontawesome.com/05e74ce1fa.js" crossorigin="anonymous"></script>
     <title>@yield('tittle') - Startcode</title>
 </head>

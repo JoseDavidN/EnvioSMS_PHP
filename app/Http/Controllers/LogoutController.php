@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\tbl_dato;
 use Illuminate\Support\Facades\Session;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class LogoutController extends Controller
@@ -12,6 +12,8 @@ class LogoutController extends Controller
         Session::flush();
 
         Auth::logout();
+
+        tbl_dato::query()->delete();
 
         return redirect()->to('/login');
     }
