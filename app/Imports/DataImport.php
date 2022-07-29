@@ -3,6 +3,7 @@
 namespace App\Imports;
 
 use App\Models\tbl_dato;
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
@@ -24,6 +25,7 @@ class DataImport implements ToModel, WithHeadingRow
     {
         
         return new tbl_dato([
+            'user' => auth()->user()->username,
             'nombres' => $row['nombres'] ?? $row['nombre'] ?? $row['Nombres'] ?? $row['Nombre'] ?? null,
             'apellidos' => $row['apellido'] ?? $row['apellidos'] ?? $row['Apellido'] ?? $row['Apellidos'] ?? null,
             'telefono' => $row['celular'] ?? $row['telefono'] ?? $row['Celular'] ?? $row['Telefono'],

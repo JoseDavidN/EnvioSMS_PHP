@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <div class="col">
+    <div class="col" id="content">
         <form action="/home" method="post" enctype="multipart/form-data">
             @csrf
             @include('partials.message')
@@ -36,10 +36,6 @@
                 <label for="filtro" class="form-label">Enviar a:</label>
                 <input type="text" class="form-control" id="filtro" name="filtro">
             </div>
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Escribe tu mensaje:</label>
-                <textarea class="form-control" id="mensaje" rows="2" name="mensaje" required></textarea>
-            </div>
             <div class="mb-2">
                 <h6>Incluir nombre en el mensaje:</h6>
             </div>
@@ -57,11 +53,29 @@
                     </label>
                 </div>
             </div>
-            <div class="mb-3">
-                <label for="file" class="form-label"><i class="fa-solid fa-file-arrow-up"></i> <span>Cargar Excel</span></label>
-                <input class="form-control" type="file" id="file" name="file">
+            <div class="mb-2">
+                <h6>Tipo de mensaje:</h6>
             </div>
-            <button type="submit" class="btn">Enviar</button>
+            <div class="mb-3 check-form">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipo" id="tipo1" checked value="sms">
+                    <label class="form-check-label" for="tipo1">
+                        SMS
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="tipo" id="tipo2" value="whatsapp">
+                    <label class="form-check-label" for="tipo2">
+                        Whatsapp
+                    </label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="mensaje" class="form-label">Escribe tu mensaje:</label>
+                <textarea class="form-control" id="mensaje" rows="2" name="mensaje" required></textarea>
+            </div>
+            <button class="btn"><a href="/cargar">Cargar Archivos</a></button>
+            <button type="submit" class="btn" id="envio">Enviar</button>
         </form>
     </div>
 @endsection

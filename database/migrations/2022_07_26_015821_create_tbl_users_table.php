@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer('limite')->default('2');
+            $table->integer('usado')->default('0');
             $table->rememberToken();
             $table->timestamps();
         });

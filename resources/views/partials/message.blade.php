@@ -12,15 +12,9 @@
     <?php  $data = Session::get('success') ;?>
     @if (is_array($data))
         @foreach ($data as $message)
-            <div class="alert alert-success">
-                <i class="fa fa-check"></i>
-                {{ $message }}
-            </div>
+            <p id="message">{{ $message }}</p>
         @endforeach
     @else
-        <div class="alert alert-success">
-        <i class="fa fa-check"></i>
-        {{ $data }}
-        </div>
+        <p id="message">{{ $data }}</p>
     @endif
 @endif

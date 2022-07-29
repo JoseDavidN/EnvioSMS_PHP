@@ -10,6 +10,6 @@ class tbl_dato extends Model
     use HasFactory;
 
     protected $fillable = [
-        'nombres', 'apellidos', 'telefono', 'edad', 'comuna', 'cargo',
+        'user','nombres', 'apellidos', 'telefono', 'edad', 'comuna', 'cargo',
     ];
 }

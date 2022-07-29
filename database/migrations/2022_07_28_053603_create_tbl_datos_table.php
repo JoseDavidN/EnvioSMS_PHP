@@ -15,13 +15,16 @@ return new class extends Migration
     {
         Schema::create('tbl_datos', function (Blueprint $table) {
             $table->id();
+            $table->string('user');
             $table->string('nombres')->nullable();
             $table->string('apellidos')->nullable();
-            $table->string('telefono');
+            $table->string('telefono')->unique();
             $table->string('edad')->nullable();
             $table->string('comuna')->nullable();
             $table->string('cargo')->nullable();
             $table->timestamps();
+
+            $table->foreign('user')->references('username')->on('tbl_users');
         });
     }
 

@@ -4,6 +4,7 @@
 
 nav{
     background-color: #444444;
+    font-size: 14px;
     font-style: italic;
 }
 nav img{
@@ -18,9 +19,9 @@ nav img{
 .navbar .navbar-text{
     color: #D11E62;
     position: relative;
-    top: 4px;
+    top: 6px;
     padding-right: 15px;
-    font-size: 19px;
+    font-size: 15px;
 }
 #navbarNav{
     justify-content: flex-end;
@@ -46,7 +47,7 @@ nav img{
     display: flex;
     justify-content: center;
     position: relative;
-    top: 100px;
+    top: 95px;
     font-size: smaller;
     font-style: oblique;
 }
@@ -58,18 +59,30 @@ nav img{
     margin-bottom: 20px;
     padding-bottom: 10px;
 }
+.uploadFile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
 div form input{
     width: 20%;
 }
 
-.filtro{
+.filtro, #message{
     display: none;
 }
 .check-form{
     display: flex;
     align-items: center;
 }
-#filtroOption2, #radioOption2{
+#filtroOption2, #radioOption2, #tipo2{
     margin-left: 5px;
 }
 
@@ -81,6 +94,20 @@ div form input{
 .btn:hover{
     background-color: #D11E62;
     color: #fff
+}
+.btn a{
+    text-decoration: none;
+    color: #fff;
+}
+.continue{
+    margin-left: 30px;
+}
+.continue:hover{
+    background-color: #25CC0B;
+    color: #fff;
+}
+.upload{
+    margin-left: -20px;
 }
 
 .form-control:focus, .form-check-input:focus{
@@ -132,7 +159,7 @@ label[for="file"]:hover{
 }
 .text-footer{
     margin: 15px 0px;
-    font-size: 16px;
+    font-size: 13px;
 }
 .text-footer a{
     text-decoration: none;
