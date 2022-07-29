@@ -75,8 +75,14 @@ div form input{
     width: 20%;
 }
 
-.filtro, #message{
+.filtro, #message, #alerta_error{
     display: none;
+}
+.filtro input{
+    width: 50%;
+}
+.para{
+    margin-left: -155px;
 }
 .check-form{
     display: flex;

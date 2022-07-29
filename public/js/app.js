@@ -7,7 +7,7 @@ jQuery('input[type=file]').change(function () {
 
 $('#filtroOption1').click(function () {
     let filtro = $('.filtro')
-    filtro.css('display', 'block')
+    filtro.css('display', 'flex')
 })
 $('#filtroOption2').click(function () {
     let filtro = $('.filtro')
@@ -22,12 +22,18 @@ if(fecha.getDay() == fecha.getDay(30) && fecha.getHours() >= fecha.getHours(02))
     limit.val('cumplido')
 }
 
+let alert_success = $("#message").text()
+let alert_error = $('#alerta_error').text()
 $('#content').ready(function(){
-    let alerta = $("#message").text()
-    if (alerta != ''){
+    if (alert_success != ''){
         Swal.fire({
             icon: 'success',   
-            text: alerta
+            text: alert_success
+        })
+    }else if(alert_error != ''){
+        Swal.fire({
+            icon: 'error',   
+            text: alert_error
         })
     }
 })

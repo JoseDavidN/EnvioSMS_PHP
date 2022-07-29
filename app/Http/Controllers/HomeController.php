@@ -29,14 +29,16 @@ class HomeController extends Controller
         $sms->setEncoding('unicode');
 
         $msj = $request->input('mensaje');
-        $filtro = $request->input('filtro');
+        $filtroOP = $request->input('filtroOption');
+        $filtro_cat = $request->input('filtro_cat');
+        $filtro_op = $request->input('filtro_op');
         $option = $request->input('radioOption');
         $tipo = $request->input('tipo');
         
         $user = auth()->user()->username;
 
-        if (!empty($filtro)) {
-            $datos = DB::table('tbl_datos')->where('cargo', $filtro)->where('user', $user)->get();
+        if (!empty($filtro_cat) && !empty($filtro_op) && $filtroOP == 'Si') {
+            $datos = DB::table('tbl_datos')->where(strtolower($filtro_cat), strtolower($filtro_op))->where('user', $user)->get();
             if (count($datos) == 0) {
                 return redirect('/home')->withErrors('No has cargado ningun Archivo');
             }

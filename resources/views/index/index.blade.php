@@ -33,8 +33,14 @@
                 </div>
             </div>
             <div class="mb-3 filtro">
-                <label for="filtro" class="form-label">Enviar a:</label>
-                <input type="text" class="form-control" id="filtro" name="filtro">
+                <div class="col">
+                    <label for="filtro" class="form-label">Filtrar por:</label>
+                    <input type="text" class="form-control" id="filtro" name="filtro_cat" placeholder="Profesion">
+                </div>
+                <div class="col para">
+                    <label for="filtro" class="form-label">A:</label>
+                    <input type="text" class="form-control" id="filtro" name="filtro_op" placeholder="Ingeniero">
+                </div>
             </div>
             <div class="mb-2">
                 <h6>Incluir nombre en el mensaje:</h6>
